@@ -1,0 +1,54 @@
+<html lang="en" dir="ltr">
+    <head>
+        <title>Price Prediction</title>
+        <link rel="stylesheet" href="static/css/style.css">
+    </head>
+    <body>
+        <div class="login">
+            <h2><u>...PREDICT THE PRICE OF VEHICLE...</u></h2>
+            <h3>Enter the following values to predict the price of vehicle</h3>
+
+            <form action="{{url_for('predict')}}"method="post">
+                <label>Enter the horsepower : </label>
+                <br>
+                <input type="text" name="horsepower" placeholder="Enter the horsepower" required="required"/>
+                <br><br>
+                <label>Curb-weight : </label>
+                <br>
+                <input type="text" name="curb-weight" placeholder="Enter the curb-weight" required="required"/>
+                <br><br>
+                <label>Engine size : </label>
+                <br>
+                <input type="text" name="engine-size" placeholder="Enter the size of engine" required="required"/>
+                <br><br>
+                <label>Highway-mpg : </label>
+                <br>
+                <input type="text" name="highway-mpg" placeholder="Enter the highway-mpg" required="required"/>
+                <br><br>
+                <label>Bore : </label>
+                <br>
+                <input type="text" name="bore" placeholder="Enter the bore" required="required"/>
+                <br><br>
+                <label>Wheel base : </label>
+                <br>
+                <input type="text" name="wheel-base" placeholder="Enter the wheel-base" required="required"/>
+                <br><br>
+                <label>City-mpg : </label>
+                <br>
+                <input type="text" name="city-mpg" placeholder="Enter the city-mpg" required="required"/>
+                <br><br>
+                <label>Length : </label>
+                <br>
+                <input type="text" name="length" placeholder="Enter the length" required="required"/>
+                <br><br>
+                <label>Width : </label>
+                <br>
+                <input type="text" name="width" placeholder="Enter the width" required="required"/>
+                <br><br>
+                <button type="Submit" class="btn">Predict</button>
+            </form>
+            {{ prediction_text }}
+        </div>
+
+    </body>
+</html>                
